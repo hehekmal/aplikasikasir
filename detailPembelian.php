@@ -1,6 +1,9 @@
 <html>
 <?php
-$PetugasID = $_GET['PetugasID']
+include('connect.php');
+$PetugasID = $_GET['PetugasID'];
+$penjualan = mysqli_query($connect, "select * from penjualan order by PenjualanID desc limit 1");
+$penjualarr = mysqli_fetch_array($penjualan);
 ?>
 
 <head>
@@ -8,7 +11,11 @@ $PetugasID = $_GET['PetugasID']
 </head>
 
 <body>
+    <h1>Detail Pembelian</h1>
+    <p></p>
+    <form action="menambah detail" method="post">
 
+    </form>
 </body>
 
 </html>
