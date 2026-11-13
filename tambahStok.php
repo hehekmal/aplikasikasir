@@ -8,6 +8,7 @@
 </head>
     <body>
     <h1>Tambah stok</h1>
+    <a href="stokBarang.php?PetugasID=<?php echo $PetugasID ?>">Kembali</a>
         <form action="menambahStok.php?PetugasID=<?php echo $PetugasID ?>" method="post">
             <input type="hidden" name="ProdukID" value="<?php echo $ProdukID ?>">
             <input type="number" name="tambahan">

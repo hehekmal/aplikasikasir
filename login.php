@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
+
 <body>
     <h1>Masuk</h1>
     <form action="loginCheck.php" method="post">

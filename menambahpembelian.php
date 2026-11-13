@@ -11,5 +11,5 @@ if ($PelangganID == '' || $TanggalPenjualan == '') {
     $penjualanlast = mysqli_query($connect, "select * from penjualan order by PenjualanID desc limit 1");
     $plastar=mysqli_fetch_array($penjualanlast);
     $penjualanID=$plastar['PenjualanID'];
-    header(header: "location: detailPembelian.php?PetugasID=$PetugasID&PenjualanID=$penjualanID");
+    header(header: "location: inputdetailPembelian.php?PetugasID=$PetugasID&PenjualanID=$penjualanID");
 }

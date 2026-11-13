@@ -14,8 +14,11 @@ $PID = mysqli_fetch_array(mysqli_query($connect, "select * from petugas where Pe
     <p>Nama Petugas:
         <?php echo $PID['NamaPetugas'] ?>
     </p>
+    <p>Status:
+        <?php echo $PID['role'] ?>
+    </p>
     <p> <a href="pendataanBarang.php?PetugasID=<?php echo $PetugasID ?>">Pendataan Barang</a></p>
-    <p> <a href="pembelian.php?PetugasID=<?php echo $PetugasID ?>">Pembelian</a></p>
+    <p> <a href="dataPembelian.php?PetugasID=<?php echo $PetugasID ?>">Pembelian</a></p>
     <p> <a href="stokBarang.php?PetugasID=<?php echo $PetugasID ?>">Stok Barang</a></p>
     <?php if($PID['role']=='administrator'){ ?>
     <p> <a href="petugas.php?PetugasID=<?php echo $PetugasID ?>">Petugas</a></p>

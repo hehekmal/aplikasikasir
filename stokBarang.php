@@ -1,14 +1,16 @@
 <html>
-    <?php 
-    $PetugasID=$_GET['PetugasID']
-     ?>
+<?php
+$PetugasID = $_GET['PetugasID']
+?>
+
 <head>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-    <body>
-        <h1>Stok Barang</h1>
+
+<body>
+    <h1>Stok Barang</h1>
     <a href="home.php?PetugasID=<?php echo $PetugasID ?>">Beranda</a>
-        <table border="1">
+    <table border="1">
 
         <tr>
             <th>No</th>
@@ -34,5 +36,6 @@
         }
         ?>
     </table>
-    </body>
+</body>
+
 </html>

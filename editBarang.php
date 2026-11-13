@@ -10,9 +10,9 @@ $produk = mysqli_fetch_array(mysqli_query($connect, "select * from produk where 
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-    <button onclick="history.back()">Kembali</button>
+    <h1>Tambah Barang</h1>
+    <a href="pendataanBarang.php?PetugasID=<?php echo $PetugasID ?>">Kembali</a>
     <form action="mengeditBarang.php?PetugasID=<?php echo $PetugasID ?>&ProdukID=<?php echo $ProdukID ?>" method="post">
-        <h1>Tambah Barang</h1>
         <table>
             <tr>
                 <td>Nama Barang</td>

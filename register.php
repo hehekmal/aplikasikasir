@@ -25,6 +25,13 @@ $PetugasID=$_GET['PetugasID'];
                 <td>Password </td>
                 <td>: <input type="password" name="Password"></td>
             </tr>
+            <tr>
+                <td>Status</td>
+                <td>: <select name="role">
+                    <option value="petugas">Petugas</option>
+                    <option value="administrator">Administrator</option>
+                </select></td>
+            </tr>
         </table>
         <p style="color: red;"><?php
                                 if (isset($_GET['salah'])) {

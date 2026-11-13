@@ -2,12 +2,14 @@
 <?php
 $PetugasID = $_GET['PetugasID'];
 ?>
+
 <head>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
+
 <body>
-        <h1>Tambah Barang</h1>
-    <button onclick="history.back()">Kembali</button>
+    <h1>Tambah Barang</h1>
+    <a href="pendataanBarang.php?PetugasID=<?php echo $PetugasID ?>">Kembali</a>
     <form action="menambahBarang.php?PetugasID=<?php echo $PetugasID ?>" method="post">
 
         <table>
@@ -24,11 +26,11 @@ $PetugasID = $_GET['PetugasID'];
     </form>
     <p style="color: red;">
         <?php
-                            if (isset($_GET['salah'])) {
-                                $salah = $_GET['salah'];
-                                echo $salah;
-                            }
-                            ?>
+        if (isset($_GET['salah'])) {
+            $salah = $_GET['salah'];
+            echo $salah;
+        }
+        ?>
     </p>
 </body>
 
