@@ -15,18 +15,18 @@ $PenjualanID = $_GET['PenjualanID'];
         <table>
             <tr>
                 <td>Produk</td>
-                <td> :<select name="ProdukID">
+                <td>: <select name="ProdukID">
                         <?php
                         $produk = mysqli_query($connect, "select * from produk");
                         while ($produkarr = mysqli_fetch_array($produk)) {
                         ?>
-                            <option value="<?php echo $produkarr['ProdukID'] ?>"><?php echo $produkarr['NamaProduk'] ?></option>
+                            <option value="<?php echo $produkarr['ProdukID'] ?>"><?php echo $produkarr['NamaProduk'] ?> <?php echo $produkarr['Harga'] ?></option>
                         <?php } ?>
                     </select></td>
             </tr>
             <tr>
                 <td>Jumlah</td>
-                <td> :<input type="number" min="0" name="JumlahProduk"></td>
+                <td>: <input type="number" min="0" name="JumlahProduk"></td>
             </tr>
         </table>
         <input type="submit">

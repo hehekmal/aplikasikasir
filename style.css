@@ -1,8 +1,9 @@
-body{
-    background-image: linear-gradient(khaki,yellow,orange);
+body {
+    background-image: linear-gradient(khaki, yellow, orange);
     text-align: center;
-    margin: 5px auto;
+    margin: 10px auto;
 }
-table{
+
+table {
     margin: 5px auto;
 }
