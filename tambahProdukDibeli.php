@@ -11,6 +11,7 @@ $PenjualanID = $_GET['PenjualanID'];
 
 <body>
     <h1>Tambah Produk</h1>
+    <a href="inputdetailPembelian.php?PetugasID=<?php echo $PetugasID ?>&PenjualanID=<?php echo $PenjualanID ?>">Kembali</a>
     <form action="menambahProdukDibeli.php?PetugasID=<?php echo $PetugasID ?>&PenjualanID=<?php echo $PenjualanID ?>" method="post">
         <table>
             <tr>
