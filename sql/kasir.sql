@@ -170,7 +170,7 @@ ALTER TABLE `petugas`
   ADD UNIQUE KEY `NomorTelepon` (`NomorTelepon`),
   ADD UNIQUE KEY `PetugasID` (`PetugasID`),
   ADD KEY `Password` (`Password`);
-  
+
 --
 -- Indexes for table `produk`
 --
