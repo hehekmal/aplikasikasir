@@ -3,14 +3,15 @@
 include('connect.php');
 $PetugasID = $_GET['PetugasID'];
 $salah = "";
-if (isset($_POST['salah'])) {
+if (isset($_POST['oldpassword'])) {
     $oldpassword = $_POST['oldpassword'];
     $newpassword = $_POST['newpassword'];
 
     $petugas = mysqli_query($connect, "select * from petugas where PetugasID='$PetugasID'");
     $petugasarr = mysqli_fetch_array($petugas);
     if ($oldpassword == $petugasarr['Password']) {
-        $petugas = mysqli_query($connect, "update petugas set Password='$newpassword' where PetugasID='$PetugasID'");
+        mysqli_query($connect, "update petugas set Password='$newpassword' where PetugasID='$PetugasID'");
+        header("location: profile.php?PetugasID=$PetugasID");
     } else {
         $salah = "password lama salah";
     }
@@ -23,7 +24,8 @@ if (isset($_POST['salah'])) {
 
 <body>
     <h1>Ganti Password</h1>
-    <form action="gantipassword.php?PetugasID=<?php echo $PetugasID ?>">
+    <a href="profile.php?PetugasID=<?php echo $PetugasID ?>">Kembali</a>
+    <form action="gantipassword.php?PetugasID=<?php echo $PetugasID ?>" method="post">
         <table>
             <tr>
                 <td>Password Lama</td>

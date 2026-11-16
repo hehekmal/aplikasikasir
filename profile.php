@@ -19,6 +19,7 @@ $dataPetugas = mysqli_fetch_array($petugas);
 
 <body>
     <h1>Profil</h1>
+    <a href="home.php?PetugasID=<?php echo $PetugasID ?>">Beranda</a>
     <table>
 
         <tr>
